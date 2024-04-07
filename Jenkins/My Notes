@@ -33,3 +33,12 @@ select ubuntu
 		sudo apt-get update
 		sudo apt-get install jenkins
 		3. Configure Jenkins - check Class notes and Class 6 recording
+	Installing Jenkin plug in via Manage Jenkins
+	Installing a prior version of a plug in
+		Go to the available plugs ins
+		go to the plug in and right right to open in a new tab
+		go to the desired version in the releases and copy the install link
+		Go to Advanced settings back on the Jenkins page and paste the URL in deploy plugin
+	User Management
+		Created users are stored as a new dir under users in Jenkins 
+		Security option is used for authorizations
