@@ -1,0 +1,35 @@
+mobaxterm connection to AWS VM
+SSH sessio9n
+EC2 instance public IP address
+username ubuntu
+Advanced SSH settings
+Use private key and select AWS Key pair
+    This should be downloaded from EC2 
+	
+Installing Jenkins
+https://www.jenkins.io/doc/book/installing/ 
+go to linux
+select ubuntu
+	Install JDK - below copied from Install JDK"
+(	in mobaxterm 
+		sudo -i to work as root)
+		sudo apt update
+		sudo apt install fontconfig openjdk-17-jre
+		java -version
+		openjdk version "17.0.8" 2023-07-18
+		OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
+		OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
+	Install Jenkins	as web browser - below from long term Support Release
+		1. Jenkins runs by default in port 8080
+			select EC2 instance and go to security tab
+			go to security group which has inbound and outbound rules
+			it has a rule for port 22 which is used by the SSH connection
+			Add an inbound rule for port 8080 via "Edit --> Add Rule and Custon TCP Type"
+		2. sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+		  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+		echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+		  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+		  /etc/apt/sources.list.d/jenkins.list > /dev/null
+		sudo apt-get update
+		sudo apt-get install jenkins
+		3. Configure Jenkins - check Class notes and Class 6 recording
