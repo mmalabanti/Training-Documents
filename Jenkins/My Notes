@@ -42,3 +42,15 @@ select ubuntu
 	User Management
 		Created users are stored as a new dir under users in Jenkins 
 		Security option is used for authorizations
+Creating Projects
+1. Freestyle
+2. Pipeline project
+contains 
+	stages: eg CI/CD pipeline would have - 
+		Identify source code repo: Clone to jenkins workspace
+			, build, unit test etc.
+	steps
+	2 types of pipeline projects
+		scripted - Groovy scriptinhg
+		Declarative: uses yaml scripting used by eg gitlab-ci, az-pipeline, aws_code_pipeline 
+scripted pipeline script starts with node while declarative starts with pipeline
