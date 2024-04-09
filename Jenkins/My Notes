@@ -54,3 +54,13 @@ contains
 		scripted - Groovy scriptinhg
 		Declarative: uses yaml scripting used by eg gitlab-ci, az-pipeline, aws_code_pipeline 
 scripted pipeline script starts with node while declarative starts with pipeline
+
+Slave node setup
+a. Root Directory in Node definition in Jenkins Master Manage /home/devopsadmin
+b. Host - Private IP Address of the slave instance
+c. Add User - 
+    Kind is SSH Username with Private Key
+d. Host Key Verification Strategy ; Manually Trustede Key Verification Strategy
+   Checkj 'Require manual verification of initial connection'
+
+
